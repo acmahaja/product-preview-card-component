@@ -1,8 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
 :root {
-    --pure-white: 255, 255, 255;
-    --cream-bg: 242, 234, 226;
-    --aurometal-saurus: 108, 114, 137;
-    --deep-aquamarine: 61, 129, 104;
-    --deep-aquamarine-hover: 26, 64, 50;
-    --gunmetal: 28, 35, 43;
+  --pure-white: 255, 255, 255;
+  --cream-bg: 242, 234, 226;
+  --aurometal-saurus: 108, 114, 137;
+  --deep-aquamarine: 61, 129, 104;
+  --deep-aquamarine-hover: 26, 64, 50;
+  --gunmetal: 28, 35, 43;
+}
+
+html body {
+  background: rgb(var(--cream-bg));
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 16px !important;
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 10px;
+}
+
+a {
+  color: rgb(var(--deep-aquamarine));
+  font-weight: 500;
+}
+
+article {
+  width: 343px;
+  height: 611px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+picture {
+  width: 100;
+  height: 240px !important;
+  display: block;
+}
+
+picture img {
+  width: 100%;
+  object-fit: cover;
+}
+
+main {
+  padding: 24px;
+  height: calc(100% - 240px);
+  box-sizing: border-box;
+}
+
+p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 23px;
+  margin: 0px;
+  color: rgb(var(--aurometal-saurus));
+}
+
+p.product_category {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-family: "Fraunces", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 32px;
+  margin: 12px 0px 16px 0px;
+  color: rgb(var(--gunmetal));
+}
+
+h2 {
+  font-family: "Fraunces", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 32px;
+  color: rgb(var(--deep-aquamarine));
+  margin: 0px;
+}
+
+.price {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 24px 0px 20px 0px;
+}
+
+.price p {
+  margin-left: 24px;
+}
+
+button {
+  background: rgb(var(--deep-aquamarine));
+  width: 100%;
+  height: 48px;
+  border: none;
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  box-sizing: border-box;
+  color: rgb(var(--pure-white));
+  border-radius: 8px;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 0.75rem;
+
+  padding: 0px !important;
+}
+
+button[data-icon="shopping-cart"]::before{
+    content:"";
+    background-image: url('images/icon-cart.svg');
+    width: 15px;
+    height: 16px;
 }
